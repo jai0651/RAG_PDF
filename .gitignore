@@ -1,0 +1,23 @@
+# Environment variables
+.env
+frontend/.env
+backend/src/config/index.ts
+
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Build outputs
+dist/
+build/
+*.log
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS specific files
+.DS_Store
+Thumbs.db
