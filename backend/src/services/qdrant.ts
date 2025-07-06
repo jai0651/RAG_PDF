@@ -51,6 +51,16 @@ export async function initializeQdrantCollection(): Promise<void> {
           distance: 'Cosine',
         }
       });
+
+        // Always try to create indexes (safe if already exists)
+    await getQdrantClient().createPayloadIndex(config.QDRANT_COLLECTION, {
+      field_name: 'documentId',
+      field_schema: 'keyword',
+    });
+    await getQdrantClient().createPayloadIndex(config.QDRANT_COLLECTION, {
+      field_name: 'userId',
+      field_schema: 'keyword',
+    });
       
       console.log(`Qdrant collection created successfully`);
     } else {

@@ -26,9 +26,9 @@ function generateSystemPrompt(results: VectorSearchResult[]): string {
     .map((r, index) => `[Section ${index + 1}]: ${r.pageContent}`)
     .join('\n\n');
     
-    console.log('contextText', contextText);
+    // console.log('contextText', contextText);
   
-  console.log("Generated context length:", contextText.length);
+//   console.log("Generated context length:", contextText.length);
   
   return `You are an AI assistant that helps users understand their PDF documents.
   
